@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: guestbook-app-of-apps
+spec:
+  project: "default"
+  source:
+    repoURL: https://github.com/34fathombelow/appset_testing.git
+    targetRevision: HEAD
+    path: app2/
+  destination:
+    name: in-cluster
+    namespace: argocd
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
