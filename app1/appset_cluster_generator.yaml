@@ -1,4 +1,4 @@
-## Needs clusters labeled "appset: true"
+## Needs clusters labeled "env: dev"
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
