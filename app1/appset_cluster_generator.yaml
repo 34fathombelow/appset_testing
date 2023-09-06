@@ -26,7 +26,7 @@ spec:
         targetRevision: HEAD
         path: guestbook
       destination:
-        name: '{{name}}'
+        server: '{{server}}'
         namespace: guestbook
       syncPolicy:
         automated:
