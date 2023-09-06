@@ -23,8 +23,5 @@ spec:
         name: '{{name}}'
         namespace: guestbook
       syncPolicy:
-        automated:
-          prune: false
-          selfHeal: false
         syncOptions:
         - CreateNamespace=true
