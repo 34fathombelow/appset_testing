@@ -10,9 +10,15 @@ spec:
       selector:
         matchLabels:
           env: dev
+  syncPolicy:
+    preserveResourcesOnDeletion: true
   template: 
     metadata:
       name: '{{name}}-guestbook'
+      labels:
+        applicationset: argo-app-test-dev
+        cluster: '{{name}}'
+        env: dev
     spec:
       project: "default"
       source:
@@ -23,5 +29,8 @@ spec:
         name: '{{name}}'
         namespace: guestbook
       syncPolicy:
+        automated:
+          prune: false
+          selfHeal: false
         syncOptions:
         - CreateNamespace=true
