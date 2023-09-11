@@ -11,7 +11,7 @@ spec:
         matchLabels:
           env: dev
   syncPolicy:
-    preserveResourcesOnDeletion: true
+    preserveResourcesOnDeletion: false
   template: 
     metadata:
       name: '{{name}}-guestbook'
