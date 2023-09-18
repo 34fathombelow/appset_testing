@@ -19,7 +19,6 @@ spec:
         applicationset: argo-app-test-dev
         cluster: '{{name}}'
         env: dev
-      annotations: {}
     spec:
       project: "default"
       source:
