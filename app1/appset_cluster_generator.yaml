@@ -19,7 +19,8 @@ spec:
         applicationset: argo-app-test-dev
         cluster: '{{name}}'
         env: dev
-      annotations: {}
+      annotations:
+        notifications.argoproj.io/subscribe.on-sync-succeeded.slack: argo
     spec:
       project: "default"
       source:
